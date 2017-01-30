@@ -1,13 +1,13 @@
 <?php
-
+error_reporting(E_ALL);
 define("BASEPATH",'/PHPOOP/request/');
 require_once('../library/autoloader.php');
 
 $response = new Response();
-//var_dump($response);
+// var_dump($response);
 
 $request = new Request($response);
-// var_dump($request);
+ // var_dump($request);
 
 // print_r($request);
 // exit();

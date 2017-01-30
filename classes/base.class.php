@@ -10,7 +10,7 @@ class Base {
   function __construct(Request $request){
     $this->request = $request;
     $this->response = $request->response;
-    require_once('library/db.php');
+    require_once('../library/db.php');
     $this->db = $db;
 
     if($this->useOrm){
@@ -32,14 +32,14 @@ class Base {
   }
 
   private function GET(){
-    $statement = $this->db->prepare('SELECT * FROM' .$this->reuest->table . 'WHERE id = :id');
+    $statement = $this->db->prepare('SELECT * FROM ' .$this->request->table . ' WHERE id = :id');
     $statement->execute(array( 'id' => $this->request->id));
     $result = $statement->fetch(PDO::FETCH_ASSOC);
     $this->response->add($result);    
   }
 
   private function INDEX(){
-    $statement = $this->db->prepare('SELECT * FROM' .$this->request->table);
+    $statement = $this->db->prepare('SELECT * FROM ' .$this->request->table);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     $this->response->add($result);
