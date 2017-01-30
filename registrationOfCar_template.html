@@ -2,33 +2,90 @@
 	<h1>Registrering av kund och bil</h1>
 	<div class="row">
 		<div class="col-xs-9">
-			<form class="form-horizontal">
+			<form action="" method="post" class="form-horizontal">
 				<fieldset>
 					<!-- Form Name -->
 					<legend>Registrera bil</legend>
-					<!-- Appended Input-->
+					
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="appendedtext">Registreringsnummer</label>
+						<label class="col-md-3 control-label" for="regno">Registreringsnummer</label>
 						<div class="col-md-4">
 							<div class="input-group">
-								<input id="appendedtext" name="appendedtext" class="form-control" placeholder="ABC123" type="text">
-								<button class="btn">Kontrollera om den finns </button>
+								<input id="regno" name="regno" class="form-control" placeholder="ABC123" type="text">
+								<button class="btn">Kontrollera om bilen finns </button>
 							</div>
 						</div>
 					</div>
-					<!-- Text input-->
+
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="textinput">Bilmodell</label>  
+						<label class="col-md-3 control-label" for="brand">Bilmodell</label>  
 						<div class="col-md-4">
-							<input id="textinput" name="textinput" type="text" placeholder="BMW,Kia,Volvo" class="form-control input-md">
+							<input id="brand" name="textinput" type="text" placeholder="BMW i3,KIA Ceed" class="form-control">
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="textinput">Felbeskrvning</label>  
+						<label class="col-md-3 control-label" for="desc">Felbeskrivning</label>  
 						<div class="col-md-8">
-							<textarea class="form-control" rows="6"></textarea>
+							<textarea class="form-control" id="desc" rows="6"></textarea>
+						</div>
+					</div>
+
+				</fieldset>
+				<fieldset>
+					<legend>Registrera kund</legend>
+
+					<div class="form-group">
+						<label for="secno" class="col-md-3 control-label">Personnummer</label>
+						<div class="col-md-4">
+							<div class="input-group">
+								<input type="text" id="secno" placeholder="ÅÅÅÅMMDDxxxx" class="form-control">
+								<button class="btn">Kontrollera om personen finns</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="name" class="col-md-3 control-label">Fullständigt namn</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" placeholder="John Doe" id="name">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="col-md-3 control-label">E-post</label>
+						<div class="col-md-4">
+							<input type="email" class="form-control" placeholder="example@example.com">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="address" class="col-md-3 control-label">Adress</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" placeholder="exempelgatan 23A" id="address">
+						</div>
+						<label for="zipCode" class="col-md-1 control-label">Postnr.</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" placeholder="12345" id="zipCode">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="city" class="col-md-3 control-label">Stad</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" placeholder="Malmö" id="city">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="phoneNo" class="col-md-3 control-label">Telefonnummer</label>
+						<div class="col-md-4">
+							<input type="tel" class="form-control" placeholder="070x">
 						</div>
 					</div>
 				</fieldset>
+				<div class="col-xs-12 text-right">
+					<button class="btn btn-lg">Spara</button>
+				</div>
 			</form>
 		</div>
